@@ -1,15 +1,13 @@
-package com.flashsale.reservation;
+package com.flashsale.reservation.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.flashsale.commons.context.TenantContext;
-import com.flashsale.commons.exception.BusinessException;
 import com.flashsale.reservation.client.InventoryClient;
 import com.flashsale.reservation.domain.Reservation;
 import com.flashsale.reservation.domain.Reservation.ReservationStatus;
 import com.flashsale.reservation.repository.ReservationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -17,6 +17,7 @@ public interface WarehouseStockRepository extends JpaRepository<WarehouseStock, 
 
     Optional<WarehouseStock> findByTenantIdAndProductIdAndWarehouseId(String tenantId, String productId, String warehouseId);
 
+    //this query eleminates Read-Modify-Write race condition
     @Modifying
     @Query("""
         UPDATE WarehouseStock w
@@ -34,6 +35,7 @@ public interface WarehouseStockRepository extends JpaRepository<WarehouseStock, 
             @Param("quantity") int quantity
     );
 
+    //this query eleminates Read-Modify-Write race condition
     @Modifying
     @Query("""
         UPDATE WarehouseStock w
@@ -51,6 +53,7 @@ public interface WarehouseStockRepository extends JpaRepository<WarehouseStock, 
             @Param("quantity") int quantity
     );
 
+    //this query eleminates Read-Modify-Write race condition
     @Modifying
     @Query("""
         UPDATE WarehouseStock w

@@ -1,7 +1,7 @@
 package com.flashsale.reservation.controller;
 
 import com.flashsale.reservation.domain.Reservation;
-import com.flashsale.reservation.ReservationService;
+import com.flashsale.reservation.service.ReservationService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;

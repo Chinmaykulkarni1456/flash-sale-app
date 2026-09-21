@@ -2,7 +2,6 @@ package com.flashsale.reservation.service;
 
 import com.flashsale.commons.context.TenantContext;
 import com.flashsale.commons.exception.BusinessException;
-import com.flashsale.reservation.ReservationService;
 import com.flashsale.reservation.client.InventoryClient;
 import com.flashsale.reservation.domain.Reservation;
 import com.flashsale.reservation.repository.ReservationRepository;

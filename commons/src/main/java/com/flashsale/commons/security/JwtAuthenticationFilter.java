@@ -58,6 +58,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                     SecurityContextHolder.getContext().setAuthentication(auth);
                 }
             } catch (Exception e) {
+                logger.error("Got an issue with token "+e.getMessage() + " , Please rectify and retry");
                 SecurityContextHolder.clearContext();
                 TenantContext.clear();
             }

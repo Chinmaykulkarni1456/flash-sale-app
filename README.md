@@ -62,3 +62,11 @@ The bigger picture: You traded peak transaction speed for ACID durability. If a 
 What you gave up: Instant, rigid consistency.
 The cost: Instead of using heavy, blocking distributed transactions (like Two-Phase Commit / 2PC) to lock the order, reservation, and inventory simultaneously across services, you used independent state machines, asynchronous callbacks, and reconciliation jobs (timeoutOrder). This means you have to write complex compensation logic (like automatic refunds and stock release).
 The bigger picture: You avoided a tight coupling that would cripple your system's availability and scaling limits under flash-sale traffic spikes, choosing instead a resilient asynchronous model that gracefully handles failures.
+
+
+OpenAPI Available
+Interactive API documentation powered by OpenAPI / Springdoc is available for each microservice to inspect endpoints, request schemas, and header requirements:
+
+Inventory Service Swagger UI: http://localhost:8081/swagger-ui/index.html
+Reservation Service Swagger UI: http://localhost:8082/swagger-ui/index.html
+Order Service Swagger UI: http://localhost:8083/swagger-ui/index.html

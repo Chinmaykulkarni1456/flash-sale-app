@@ -1,0 +1,16 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Compiled class files
+*.class
+
+# Build directories
+target/
+out/
+.gradle/
+build/
+
+# IntelliJ project files
+.idea/
+*.iml
